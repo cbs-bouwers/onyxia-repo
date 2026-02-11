@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  my-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-02-11T10:12:35.611957745Z"
+    description: A Helm chart for Kubernetes
+    digest: 60341bcb22baa5c815eb8e13393da005e1e910266b9aa67507350aaef44b09b0
+    name: my-chart
+    type: application
+    urls:
+    - https://github.com/cbs-bouwers/onyxia-repo/my-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-02-11T10:12:35.611287443Z"

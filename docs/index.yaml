@@ -2,10 +2,10 @@ apiVersion: v1
 entries:
   jupyter-python:
   - apiVersion: v2
-    created: "2026-02-11T10:36:21.91202161Z"
+    created: "2026-02-11T11:01:34.061393192Z"
     description: The JupyterLab IDE with Python and a collection of standard data
       science packages.
-    digest: 59256b48d108a67e8e6e1af7893f69021f703270da9cf4c3e350c1a6ee6241f3
+    digest: 09363e2e9b7cb2a85e0bac1f28c08262a35a07b0f42996ed06482ad9a2f19383
     home: https://jupyter.org/
     icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/jupyter.png
     keywords:
@@ -22,7 +22,7 @@ entries:
   my-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2026-02-11T10:36:21.912528559Z"
+    created: "2026-02-11T11:01:34.06187683Z"
     description: A Helm chart for Kubernetes
     digest: 60341bcb22baa5c815eb8e13393da005e1e910266b9aa67507350aaef44b09b0
     name: my-chart
@@ -30,4 +30,4 @@ entries:
     urls:
     - https://cbs-bouwers.github.io/onyxia-repo/my-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2026-02-11T10:36:21.911135333Z"
+generated: "2026-02-11T11:01:34.060272963Z"

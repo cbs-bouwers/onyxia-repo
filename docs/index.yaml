@@ -29,7 +29,8 @@ entries:
     created: "2026-02-11T11:52:20.536323808Z"
     description: A Helm chart for Kubernetes
     digest: 60341bcb22baa5c815eb8e13393da005e1e910266b9aa67507350aaef44b09b0
-    name: my-chart
+    name: Octopus
+    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/octopus.svg
     type: application
     urls:
     - https://cbs-bouwers.github.io/onyxia-repo/my-chart-0.1.0.tgz

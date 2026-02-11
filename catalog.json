@@ -1,0 +1,19 @@
+{
+  "name": "My Custom Catalog",
+  "description": "Minimal Onyxia catalog",
+  "maintainer": "Your Name",
+  "charts": [
+    {
+      "name": "jupyter-python",
+      "description": "My jupyter service",
+      "chart": "charts/jupyter-python",
+      "icon": "https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/jupyter.png"
+    },
+        {
+      "name": "vscode-python",
+      "description": "My vscode service",
+      "chart": "charts/vscode-python",
+      "icon": "https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/vscode.png"
+    }
+  ]
+}

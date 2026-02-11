@@ -23,11 +23,11 @@ entries:
     urls:
     - https://cbs-bouwers.github.io/onyxia-repo/jupyter-python-2.4.4.tgz
     version: 2.4.4
-  my-chart:
+  Octopus:
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2026-02-11T11:52:20.536323808Z"
-    description: A Helm chart for Kubernetes
+    description: Octopus export
     digest: 60341bcb22baa5c815eb8e13393da005e1e910266b9aa67507350aaef44b09b0
     name: Octopus
     icon: https://cbs-bouwers.github.io/onyxia-repo/icons/octopus.svg

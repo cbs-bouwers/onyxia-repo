@@ -17,7 +17,7 @@ entries:
     - https://github.com/InseeFrLab/helm-charts-interactive-services
     type: application
     urls:
-    - https://github.com/cbs-bouwers/onyxia-repo/jupyter-python-2.4.4.tgz
+    - https://cbs-bouwers.github.io/onyxia-repo/jupyter-python-2.4.4.tgz
     version: 2.4.4
   my-chart:
   - apiVersion: v2
@@ -28,6 +28,6 @@ entries:
     name: my-chart
     type: application
     urls:
-    - https://github.com/cbs-bouwers/onyxia-repo/my-chart-0.1.0.tgz
+    - https://cbs-bouwers.github.io/onyxia-repo/my-chart-0.1.0.tgz
     version: 0.1.0
 generated: "2026-02-11T10:36:21.911135333Z"

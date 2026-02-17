@@ -1,8 +1,28 @@
 apiVersion: v1
 entries:
+  Octopus:
+  - apiVersion: v2
+    appVersion: 0.1.2
+    created: "2026-02-17T12:36:29.406964378Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-interactive-services
+      version: 2.0.3
+    description: request an export audit on statistical output files.
+    digest: b904414838ddbf57506d403a890518b42ba3ff1e68740a7da1c4fcba6b62cf92
+    home: https://cbs.nl/
+    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/octopus.svg
+    keywords:
+    - CBS
+    - Octopus
+    name: Octopus
+    type: application
+    urls:
+    - https://cbs-bouwers.github.io/onyxia-repo/Octopus-0.1.2.tgz
+    version: 0.1.2
   jupyter-python:
   - apiVersion: v2
-    created: "2026-02-17T12:23:15.532714327Z"
+    created: "2026-02-17T12:36:29.408755178Z"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -23,34 +43,4 @@ entries:
     urls:
     - https://cbs-bouwers.github.io/onyxia-repo/jupyter-python-2.4.4.tgz
     version: 2.4.4
-  my-chart:
-  - apiVersion: v2
-    appVersion: 0.1.1
-    created: "2026-02-17T12:23:15.534574366Z"
-    dependencies:
-    - name: library-chart
-      repository: https://inseefrlab.github.io/helm-charts-interactive-services
-      version: 2.0.3
-    description: A Helm chart for Kubernetes
-    digest: 36c60a5c46802c46311c027d0c5b83e3e3b98ca4d14d3a39eb89a7749cdf47ff
-    home: https://cbs.nl/
-    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/octopus.svg
-    keywords:
-    - CBS
-    - Octopus
-    name: my-chart
-    type: application
-    urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/my-chart-0.1.1.tgz
-    version: 0.1.1
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2026-02-17T12:23:15.533246074Z"
-    description: A Helm chart for Kubernetes
-    digest: 60341bcb22baa5c815eb8e13393da005e1e910266b9aa67507350aaef44b09b0
-    name: my-chart
-    type: application
-    urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/my-chart-0.1.0.tgz
-    version: 0.1.0
-generated: "2026-02-17T12:23:15.531159013Z"
+generated: "2026-02-17T12:36:29.405821485Z"

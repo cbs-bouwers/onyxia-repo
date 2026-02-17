@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "octopus": {
+      "title": "Octopus",
+      "type": "object",
+      "properties": {
+        "image": {
+          "title": "Used files",
+          "type": "object",
+          "properties": {
+            "pullPolicy": {
+              "title": "Select files",
+              "type": "string",
+              "default": "CBA002",
+              "enum": [
+                "CBA002",
+                "DAC300",
+                "PROTO"
+              ]
+            },
+            "custom": {
+              "title": "Decode values",
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "title": "Needs decodeing?",
+                  "type": "boolean",
+                  "default": false
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

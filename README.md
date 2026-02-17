@@ -21,7 +21,7 @@ dependencies:
 - helm repo index docs --url https://cbs-bouwers.github.io/onyxia-repo/
 - Push the hanges to main
  
-If you change the catalog, you must restart the Onyxia API for changes to take effect.
+If you change the catalog, you must restart the Onyxia API for changes to take effect. old versions will be shown in a dropdown, untill you remove them from the repo.
 
 > kubectl rollout restart deployment platform-onyxia-api
 

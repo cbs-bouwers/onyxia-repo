@@ -22,3 +22,8 @@ dependencies:
 If you change the catalog, you must restart the Onyxia API for changes to take effect.
 
 > kubectl rollout restart deployment platform-onyxia-api
+
+To supply custom icons upload them docs/icons. You can refference them with the following url:
+
+https://cbs-bouwers.github.io/onyxia-repo/icons/icon.png
+

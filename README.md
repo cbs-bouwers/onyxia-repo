@@ -18,6 +18,8 @@ dependencies:
 - helm dependency update charts/my-chart (pull dependencies)
 - helm package charts/my-chart (package helm chart)
 - mv charts/my-chart/my-chart-0.0.1.tgz docs/
+- helm repo index docs --url https://cbs-bouwers.github.io/onyxia-repo/
+- Push the hanges to main
  
 If you change the catalog, you must restart the Onyxia API for changes to take effect.
 

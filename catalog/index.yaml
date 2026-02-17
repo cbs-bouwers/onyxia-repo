@@ -1,0 +1,37 @@
+apiVersion: v1
+entries:
+  jupyter-python:
+  - apiVersion: v2
+    created: "2026-02-17T11:47:59.820090667Z"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-interactive-services
+      version: 2.0.3
+    description: The JupyterLab IDE with Python and a collection of standard data
+      science packages.
+    digest: 2b796e6c831468fb612aaa5d5e97566bd8158df84204c6563f7082b1fb307a46
+    home: https://jupyter.org/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/jupyter.png
+    keywords:
+    - Jupyter
+    - Python
+    name: jupyter-python
+    sources:
+    - https://github.com/InseeFrLab/images-datascience
+    - https://github.com/InseeFrLab/helm-charts-interactive-services
+    type: application
+    urls:
+    - https://cbs-bouwers.github.io/onyxia-repo/jupyter-python-2.4.4.tgz
+    version: 2.4.4
+  my-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-02-17T11:47:59.820520672Z"
+    description: A Helm chart for Kubernetes
+    digest: 60341bcb22baa5c815eb8e13393da005e1e910266b9aa67507350aaef44b09b0
+    name: my-chart
+    type: application
+    urls:
+    - https://cbs-bouwers.github.io/onyxia-repo/my-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-02-17T11:47:59.818256843Z"

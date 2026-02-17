@@ -1,17 +1,24 @@
 # Onyxia helm charts
+This repo is used by Onyxia datalab. It serves as a catalog of available applications.
 
-Create github pages > doc
+To make the code reachable for onyxia crate a gihub pages pointing to catalog directory:
 
-> cd doc
-> cd library-chart/
-> helm package .
-> mv mv library-chart-2.0.3.tgz ../jupyter-python/charts/
-> cd ..
-> helm create my-chart
-> helm package my-chart
-> helm repo index . --url https://cbs-bouwers.github.io/onyxia-repo/
+repo > settings> pages
 
-Change 
-index.yaml
-    urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/.....tgz
+Deploy from branch: main/catalog
+
+To add a library follow the following steps:
+
+- helm create charts/my-chart (optional)
+- Make sure you add dependency library-chart (in charts/my-chart/Chart.yaml):
+dependencies:
+  - name: library-chart
+    version: 2.0.3
+    repository: https://inseefrlab.github.io/helm-charts-interactive-services
+- helm dependency update charts/my-chart (pull dependencies)
+- helm package charts/my-chart (package helm chart)
+- mv charts/my-chart/my-chart-0.0.1.tgz catalog/
+ 
+If you change the catalog, you must restart the Onyxia API for changes to take effect.
+
+> kubectl rollout restart deployment platform-onyxia-api

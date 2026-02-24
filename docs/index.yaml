@@ -3,7 +3,7 @@ entries:
   Octopus:
   - apiVersion: v2
     appVersion: 0.1.2
-    created: "2026-02-17T12:36:29.406964378Z"
+    created: "2026-02-24T11:24:34.468512+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -22,7 +22,7 @@ entries:
     version: 0.1.2
   jupyter-python:
   - apiVersion: v2
-    created: "2026-02-17T12:36:29.408755178Z"
+    created: "2026-02-24T11:24:34.471664+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -43,4 +43,49 @@ entries:
     urls:
     - https://cbs-bouwers.github.io/onyxia-repo/jupyter-python-2.4.4.tgz
     version: 2.4.4
-generated: "2026-02-17T12:36:29.405821485Z"
+  rstudio:
+  - apiVersion: v2
+    created: "2026-02-24T11:24:34.473473+01:00"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-interactive-services
+      version: 2.0.3
+    description: The RStudio IDE with a collection of standard data science packages.
+    digest: 89fec29bc58f048bed6d2bb9bd8c3e2ca0698a048cb91d84448a50c4dbbc24af
+    home: https://www.rstudio.com/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/rstudio.png
+    keywords:
+    - RStudio
+    - R
+    name: rstudio
+    sources:
+    - https://github.com/InseeFrLab/images-datascience
+    - https://github.com/InseeFrLab/helm-charts-interactive-services
+    type: application
+    urls:
+    - https://cbs-bouwers.github.io/onyxia-repo/rstudio-2.4.2.tgz
+    version: 2.4.2
+  rstudio-minimal:
+  - apiVersion: v2
+    created: "2026-02-24T11:24:34.476076+01:00"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-interactive-services
+      version: 2.0.3
+    description: The RStudio IDE with a collection of standard data science packages.
+    digest: 073777e8fc3b047dbc558e033427aea3a7d9001cb05733947af22d6e2459c1ff
+    home: https://www.rstudio.com/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/rstudio.png
+    keywords:
+    - RStudio
+    - R
+    name: rstudio-minimal
+    sources:
+    - https://github.com/InseeFrLab/images-datascience
+    - https://github.com/InseeFrLab/helm-charts-interactive-services
+    - https://github.com/cbs-bouwers/onyxia-repo
+    type: application
+    urls:
+    - https://cbs-bouwers.github.io/onyxia-repo/rstudio-minimal-0.0.1.tgz
+    version: 0.0.1
+generated: "2026-02-24T11:24:34.46488+01:00"

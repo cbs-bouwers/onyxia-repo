@@ -16,15 +16,15 @@
 		{{- else if eq ".Values.resources.size" "S" }}
 			# S: provide between 0.5 - 1.1 vCPU + 2 - 4 GB RAM
 			requests:
-				cpu: 500m
+				cpu: 900m
 				memory: 2048Gi
 			limits:
 				cpu: 1100m
 				memory: 4096Gi
 		{{- else if eq ".Values.resources.size" "M" }}
-			# M: provide between 0.8 - 2.1 vCPU + 2 - 8 GB RAM
+			# M: provide between 0.5 - 2.1 vCPU + 2 - 8 GB RAM
 			requests:
-				cpu: 800m
+				cpu: 900m
 				memory: 2048Gi
 			limits:
 				cpu: 2100m
@@ -46,5 +46,5 @@
 				cpu: 8100m
 				memory: 32768Gi
 		{{- end }}
-	{{ - end }}
+	{{- end }}
 {{- end}}

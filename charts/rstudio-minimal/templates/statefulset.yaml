@@ -125,11 +125,7 @@ spec:
                 fieldRef:
                   fieldPath: metadata.name
             - name: IMAGE_NAME
-              {{- if .Values.service.image.custom.enabled }}
-              value: "{{ .Values.service.image.custom.version }}"
-              {{- else }}
               value: "{{ .Values.service.image.version }}"
-              {{- end }}
             - name: PROJECT_USER
               value: {{ .Values.environment.user }}
             - name: PROJECT_GROUP

@@ -3,7 +3,7 @@ entries:
   Octopus:
   - apiVersion: v2
     appVersion: 0.1.2
-    created: "2026-02-26T18:17:17.322037+01:00"
+    created: "2026-02-26T18:58:01.578248+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -22,7 +22,7 @@ entries:
     version: 0.1.2
   jupyter-python:
   - apiVersion: v2
-    created: "2026-02-26T18:17:17.326805+01:00"
+    created: "2026-02-26T18:58:01.580388+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -45,7 +45,7 @@ entries:
     version: 2.4.4
   rstudio:
   - apiVersion: v2
-    created: "2026-02-26T18:17:17.329954+01:00"
+    created: "2026-02-26T18:58:01.583092+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -67,13 +67,13 @@ entries:
     version: 2.4.2
   rstudio-minimal:
   - apiVersion: v2
-    created: "2026-02-26T18:17:17.331989+01:00"
+    created: "2026-02-26T18:58:01.585476+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
       version: 2.0.3
     description: The RStudio IDE with a collection of standard data science packages.
-    digest: df8a6ab6cff0eea852b1209a822e98a17f1b258505935e5753ecaf4f0717e59a
+    digest: d400e8945b3acfef5c13d85a16e0da43f59553f7179de78b6e8574be1eb64aa6
     home: https://www.rstudio.com/
     icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/rstudio.png
     keywords:
@@ -86,6 +86,6 @@ entries:
     - https://github.com/cbs-bouwers/onyxia-repo
     type: application
     urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/rstudio-minimal-0.0.5.tgz
-    version: 0.0.5
-generated: "2026-02-26T18:17:17.314023+01:00"
+    - https://cbs-bouwers.github.io/onyxia-repo/rstudio-minimal-0.0.6.tgz
+    version: 0.0.6
+generated: "2026-02-26T18:58:01.57576+01:00"

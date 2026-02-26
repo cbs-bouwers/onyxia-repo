@@ -1,6 +1,9 @@
 
 #### Kustomize / Helm ---------------------------------------------------------
 
+# Ignore private folders
+/__*/
+
 # Ignore secrets
 **/secrets/*
 !**/secrets/*-encrypted.yaml

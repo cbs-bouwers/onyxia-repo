@@ -7,6 +7,51 @@ This service limits user-configuration options to the minimum.
 
 **Homepage:** <https://www.rstudio.com/>
 
+## Minimal Chart
+
+This is a minimal chart, which means that the amount of configuration options the user can adjust is greatly limited.
+
+What's different from standard INSEE Charts?
+
+- No custom container image (user can only pick image from list)
+- By default T-shirt size resources (XS, S, M, L, XL)
+- (WIP) Provide users with option to customize resources
+- Remove Kubernetes permissions (do not allow users to create services that change cluster)
+- Hide Vault from (Onyxia uses form to inject vault settings)
+- Hide S3 configuration (Onyxia uses form to inject S3 settings)
+- Hide Git configuration (Onyxia can inject information into form)
+- Remove networking (do not allow user to open extra ports on service)
+- Remove discovery (do not discover third-party services in cluster (like PostgeSQL))
+- Remove security (do not allow user to change container password)
+
+## T-Shirt sizing
+
+> [!NOTE]
+> Sizes are defined in `templates/_resources.tpl`
+
+| Size | CPU (reserved - limit) [mCPU] | RAM (claimed - limit) [GiB] | Purpose                    |
+| ---- | ----------------------------- | --------------------------- | -------------------------- |
+| XS   | 1000 - 1000                   | 1 - 1                       | Batchjobs, Small projects  |
+| S    | 1000 - 2000                   | 2 - 2                       | Entry-level data analysis  |
+| M    | 2000 - 4000                   | 4 - 4                       | Common usage               |
+| L    | 2000 - 4000                   | 8 - 8                       | Large datasets             |
+| XL   | 4000 - 8000                   | 16 - 16                     | Advanced, high-performance |
+
+### Kubernetes resource limits and scheduling
+
+- Kubernetes schedules pods on a node according to the **requested** size.
+- _If_ node has capacity, pods are allowed to consume more than the requested size (up to the their limit).
+- Keep in mind, a node will need to spend some of its resources on administration
+- CPU resources are determined in CPU units: 1000 mCPU = 1 physical/virtual CPU.
+  I prefer to think of CPU als % of cycles; 1000 mCPU = 100% clock-cycles of 1 CPU go to process, 1.5 CPU = 100% of CPU A + 50% of CPU B
+- Memory resources should be defined in "bibytes": KiB, MiB, GiB, TiB (1 KiB = 1024 bytes, 1 MiB = 1048576 bytes)
+- Exceeding CPU _limits_ will cause containers to be throttled.
+- Exceeding Memory _limits_ will cause kubernetes to **kill** the container.
+- Containers _can use the unused requested CPU time_ of other containers (within their limit).
+
+Right now I've just selected some initial values without too much consideration.
+We may want to investigate the proper values later.
+
 ## Source Code
 
 - <https://github.com/InseeFrLab/images-datascience>
@@ -86,8 +131,9 @@ This service limits user-configuration options to the minimum.
 | repository.configMapName                   | string | `""`                                 |             |
 | repository.packageManagerUrl               | string | `""`                                 |             |
 | repository.rRepository                     | string | `""`                                 |             |
-| resources.size                             | string | `"M"`                                |
-| resources.custom                           | object | `{}`                                 |             |
+| resources.size                             | string | `"M"`                                |             |
+| resources.custom.requests.cpu              | string | `1000m`                              |             |
+| resources.custom.requests.memory           | string | `"1Gi"`                              |             |
 | route.annotations                          | list   | `[]`                                 |             |
 | route.enabled                              | bool   | `false`                              |             |
 | route.hostname                             | string | `"chart-example.local"`              |             |

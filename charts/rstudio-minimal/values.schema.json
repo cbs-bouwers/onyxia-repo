@@ -30,11 +30,77 @@
       "properties": {
         "size": {
           "title": "Select amount of required resources",
-          "description": "XS: 1 vCPU + 2GB RAM, S: 1 vCPU + 4GB RAM, M: 2 vCPU + 8GB RAM, L: 4 vCPU + 16GB RAM, XL: 8 vCPU + 32 GB RAM",
+          "description": "XS: 1 vCPU + 1GB RAM, S: 1-2 vCPU + 2GB RAM, M: 2-4 vCPU + 4GB RAM, L: 2-4 vCPU + 8GB RAM, XL: 4-8 vCPU + 16GB RAM",
           "type": "string",
           "listEnum": ["XS", "S", "M", "L", "XL"],
           "render": "list",
-          "default": "M"
+          "default": "M",
+          "hidden": {
+            "value": false,
+            "path": "enabled",
+            "isPathRelative": true
+          }
+        },
+        "custom": {
+          "title": "Custom resources",
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "title": "Use custom resources instead",
+              "type": "boolean",
+              "default": false
+            },
+            "requests": {
+              "description": "Guaranteed resources",
+              "type": "object",
+              "properties": {
+                "cpu": {
+                  "description": "Guaranteed CPU allocation",
+                  "title": "CPU",
+                  "type": "string",
+                  "default": "1000m",
+                  "render": "slider",
+                  "sliderMin": 1000,
+                  "sliderMax": 16000,
+                  "sliderStep": 500,
+                  "sliderUnit": "m",
+                  "sliderExtremity": "down",
+                  "sliderExtremitySemantic": "guaranteed",
+                  "sliderRangeId": "cpu",
+                  "x-onyxia": {
+                    "overwriteDefaultWith": "region.resources.cpuRequest",
+                    "useRegionSliderConfig": "cpu"
+                  },
+                  "hidden": {
+                    "value": false,
+                    "path": "resources/custom/enabled"
+                  }
+                },
+                "memory": {
+                  "description": "Guaranteed memory allocation",
+                  "title": "memory",
+                  "type": "string",
+                  "default": "2Gi",
+                  "render": "slider",
+                  "sliderMin": 1,
+                  "sliderMax": 48,
+                  "sliderStep": 1,
+                  "sliderUnit": "Gi",
+                  "sliderExtremity": "down",
+                  "sliderExtremitySemantic": "guaranteed",
+                  "sliderRangeId": "memory",
+                  "x-onyxia": {
+                    "overwriteDefaultWith": "region.resources.memoryRequest",
+                    "useRegionSliderConfig": "memory"
+                  },
+                  "hidden": {
+                    "value": false,
+                    "path": "resources/custom/enabled"
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -123,35 +189,10 @@
         }
       }
     },
-    "kubernetes": {
-      "title": "Kubernetes permissions",
-      "type": "object",
-      "x-onyxia": {
-        "overwriteSchemaWith": "ide/role.json"
-      },
-      "properties": {
-        "enabled": {
-          "title": "Enable Kubernetes access from within the service",
-          "type": "boolean",
-          "default": true
-        },
-        "role": {
-          "title": "Kubernetes role",
-          "description": "access is restricted to your own namespace",
-          "type": "string",
-          "default": "view",
-          "hidden": {
-            "value": false,
-            "path": "kubernetes/enabled"
-          },
-          "listEnum": ["view", "edit", "admin"],
-          "render": "list"
-        }
-      }
-    },
     "vault": {
       "title": "Vault access",
       "type": "object",
+      "hidden": true,
       "x-onyxia": {
         "overwriteSchemaWith": "ide/vault.json"
       },
@@ -225,6 +266,7 @@
     },
     "s3": {
       "title": "S3 object storage",
+      "hidden": true,
       "type": "object",
       "x-onyxia": {
         "overwriteSchemaWith": "ide/s3.json"
@@ -328,6 +370,7 @@
     "git": {
       "title": "Git access",
       "type": "object",
+      "hidden": true,
       "x-onyxia": {
         "overwriteSchemaWith": "ide/git.json"
       },
@@ -413,146 +456,6 @@
             "value": false,
             "path": "enabled",
             "isPathRelative": true
-          }
-        }
-      }
-    },
-    "networking": {
-      "title": "Network access",
-      "type": "object",
-      "form": true,
-      "x-onyxia": {
-        "overwriteSchemaWith": "ide/networking.json"
-      },
-      "properties": {
-        "user": {
-          "title": "Ports",
-          "type": "object",
-          "properties": {
-            "enabled": {
-              "title": "Enable access to your service through specific ports",
-              "type": "boolean",
-              "default": false
-            },
-            "port": {
-              "title": "Port number to expose",
-              "type": "integer",
-              "hidden": {
-                "value": false,
-                "path": "networking/user/enabled"
-              },
-              "default": 5000
-            },
-            "ports": {
-              "title": "Port numbers to expose",
-              "type": "array",
-              "items": {
-                "type": "integer",
-                "uniqueItems": true,
-                "default": 5000
-              },
-              "default": [],
-              "x-onyxia": {
-                "hidden": true
-              }
-            }
-          }
-        }
-      }
-    },
-    "discovery": {
-      "title": "Third party services discovery",
-      "type": "object",
-      "properties": {
-        "postgresql": {
-          "title": "Discover PostgreSQL services",
-          "type": "boolean",
-          "default": true
-        }
-      }
-    },
-    "security": {
-      "title": "Security",
-      "type": "object",
-      "properties": {
-        "password": {
-          "title": "Service password",
-          "type": "string",
-          "default": "changeme",
-          "render": "password",
-          "x-onyxia": {
-            "overwriteDefaultWith": "{{service.oneTimePassword}}",
-            "overwriteSchemaWith": "ide/password.json"
-          }
-        },
-        "networkPolicy": {
-          "title": "Network access policy",
-          "type": "object",
-          "x-onyxia": {
-            "overwriteSchemaWith": "network-policy.json"
-          },
-          "properties": {
-            "enabled": {
-              "title": "Only allow access from the same namespace",
-              "type": "boolean",
-              "default": false,
-              "x-onyxia": {
-                "overwriteDefaultWith": "region.defaultNetworkPolicy"
-              }
-            },
-            "from": {
-              "description": "Array of sources allowed to have network access to your service",
-              "type": "array",
-              "items": {
-                "type": "object",
-                "additionalProperties": true
-              },
-              "default": [],
-              "x-onyxia": {
-                "hidden": true,
-                "overwriteDefaultWith": "region.from"
-              }
-            }
-          }
-        }
-      }
-    },
-    "nodeSelector": {
-      "title": "Node selector",
-      "type": "object",
-      "default": {},
-      "additionalProperties": {
-        "type": "string"
-      },
-      "x-onyxia": {
-        "hidden": false,
-        "overwriteDefaultWith": "region.nodeSelector",
-        "overwriteSchemaWith": "nodeSelector.json"
-      }
-    },
-    "openshiftSCC": {
-      "description": "configuration for openshift compatibility",
-      "type": "object",
-      "x-onyxia": {
-        "overwriteSchemaWith": "ide/openshiftSCC.json"
-      },
-      "properties": {
-        "enabled": {
-          "description": "enable rolebinding with openshift scc",
-          "type": "boolean",
-          "default": false,
-          "x-onyxia": {
-            "hidden": true,
-            "overwriteDefaultWith": "region.openshiftSCC.enabled"
-          }
-        },
-        "scc": {
-          "type": "string",
-          "description": "name of scc for rolebinding",
-          "default": "anyuid",
-          "x-onyxia": {
-            "hidden": true,
-            "overwriteDefaultWith": "region.openshiftSCC.scc"
           }
         }
       }

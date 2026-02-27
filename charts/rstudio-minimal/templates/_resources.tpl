@@ -44,9 +44,6 @@
         memory: 16Gi
     {{- end -}}
   {{- else }}
-    requests:
-      {{- toYaml .Values.resources.custom.requests | nindent 6 }}
-    limits:
-      {{- toYaml .Values.resources.custom.requests | nindent 6 }}
+    {{- toYaml .Values.resources.custom | nindent 6 }}
   {{- end -}}
 {{- end -}}

@@ -36,9 +36,8 @@
           "render": "list",
           "default": "M",
           "hidden": {
-            "value": false,
-            "path": "enabled",
-            "isPathRelative": true
+            "value": true,
+            "path": "resources/custom/enabled"
           }
         },
         "custom": {
@@ -91,6 +90,56 @@
                   "sliderRangeId": "memory",
                   "x-onyxia": {
                     "overwriteDefaultWith": "region.resources.memoryRequest",
+                    "useRegionSliderConfig": "memory"
+                  },
+                  "hidden": {
+                    "value": false,
+                    "path": "resources/custom/enabled"
+                  }
+                }
+              }
+            },
+            "limits": {
+              "description": "max resources",
+              "type": "object",
+              "properties": {
+                "cpu": {
+                  "description": "Maximum CPU allocation",
+                  "title": "CPU",
+                  "type": "string",
+                  "default": "30000m",
+                  "render": "slider",
+                  "sliderMin": 50,
+                  "sliderMax": 40000,
+                  "sliderStep": 50,
+                  "sliderUnit": "m",
+                  "sliderExtremity": "up",
+                  "sliderExtremitySemantic": "Maximum",
+                  "sliderRangeId": "cpu",
+                  "x-onyxia": {
+                    "overwriteDefaultWith": "region.resources.cpuLimit",
+                    "useRegionSliderConfig": "cpu"
+                  },
+                  "hidden": {
+                    "value": false,
+                    "path": "resources/custom/enabled"
+                  }
+                },
+                "memory": {
+                  "description": "Maximum memory allocation",
+                  "title": "Memory",
+                  "type": "string",
+                  "default": "16Gi",
+                  "render": "slider",
+                  "sliderMin": 1,
+                  "sliderMax": 48,
+                  "sliderStep": 1,
+                  "sliderUnit": "Gi",
+                  "sliderExtremity": "up",
+                  "sliderExtremitySemantic": "Maximum",
+                  "sliderRangeId": "memory",
+                  "x-onyxia": {
+                    "overwriteDefaultWith": "region.resources.memoryLimit",
                     "useRegionSliderConfig": "memory"
                   },
                   "hidden": {
@@ -192,8 +241,8 @@
     "vault": {
       "title": "Vault access",
       "type": "object",
-      "hidden": true,
       "x-onyxia": {
+        "hidden": true,
         "overwriteSchemaWith": "ide/vault.json"
       },
       "properties": {

@@ -15,6 +15,14 @@ dependencies:
 ```
 
 2. Modify chart
+
+> [!TIP]
+> You can use `helm template --debug ./charts/my-chart -f __test/values_my-chart.yaml > __test/resources.yaml`, \
+> to test the templating of the chart, by rendering the kubernetes resources using a basic test values file.\
+> In this example I've created \_\_test/values-my-chart.yaml to test what resource definitions the charts creates,
+> given specific test values.\
+> With the `--debug` flag Helm will render the resource definitions even if it leads to invalid YAML.
+
 3. Update Chart version in `charts/my-chart/Chart.yaml`
 4. Run `./scripts/build_chart.sh my-chart` to package chart and update repository index. This will do
 

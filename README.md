@@ -68,3 +68,14 @@ https://cbs-bouwers.github.io/onyxia-repo/icons/icon.png
 Add resources to onyxia-theme and zip to docs:
 
 > zip -r docs/themes/onyxia-theme-futurum.zip onyxia-theme 
+
+This theme set will be available under:
+
+https://cbs-bouwers.github.io/onyxia-repo/themes/onyxia-theme-futurum.zip
+
+And should be added to 40_platform/onyxia/values.yaml as:
+
+onyxia:
+  web:
+    env:
+      CUSTOM_RESOURCES

@@ -63,3 +63,8 @@ If you change the catalog, you must restart the Onyxia API for changes to take e
 To supply custom icons upload them docs/icons. You can refference them with the following url:
 
 https://cbs-bouwers.github.io/onyxia-repo/icons/icon.png
+
+# Theme
+Add resources to onyxia-theme and zip to docs:
+
+> zip -r docs/themes/onyxia-theme-futurum.zip onyxia-theme 

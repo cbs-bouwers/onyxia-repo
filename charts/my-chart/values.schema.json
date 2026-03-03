@@ -6,30 +6,6 @@
       "title": "Octopus",
       "type": "object",
       "properties": {
-        "name": {
-            "type": "string",
-            "description": "user name for octopus",
-            "default": "",
-            "x-onyxia": {
-                "overwriteDefaultWith": "{{octopus.name}}"
-            },
-            "hidden": {
-                "value": false,
-                "path": "octopus/enabled"
-            }
-        },
-        "email": {
-            "type": "string",
-            "description": "user email for octopus",
-            "default": "",
-            "x-onyxia": {
-                "overwriteDefaultWith": "{{octopus.email}}"
-            },
-            "hidden": {
-                "value": false,
-                "path": "octopus/enabled"
-            }
-        },
         "image": {
           "title": "Used files",
           "type": "object",

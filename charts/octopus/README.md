@@ -2,9 +2,8 @@
 version: 0.1.6
 appVersion: "0.1.6"
 
-> helm package charts/octopus
-> mv octopus-0.1.6.tgz docs
-> rm docs/octopus-0.1.5.tgz 
+> rm docs/octopus-*.tgz 
+> helm package charts/octopus -d docs
 > helm repo index docs --url https://cbs-bouwers.github.io/onyxia-repo/
 
 git commit and push

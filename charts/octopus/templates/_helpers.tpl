@@ -7,5 +7,5 @@ octopus-app
 {{- end }}
 
 {{- define "my-express-app.fullname" -}}
-{{ include "my-express-app.name" . }}
-{{- end }}
+{{ .Release.Name }}-{{ .Chart.Name }}
+{{- end -}}

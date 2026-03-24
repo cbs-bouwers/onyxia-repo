@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "my-express-app.fullname" . }}
+  namespace: user-max
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:

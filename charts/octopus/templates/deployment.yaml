@@ -23,6 +23,6 @@ spec:
             httpGet:
               path: /api
               port: {{ .Values.service.targetPort }}
-          initialDelaySeconds: 5
-          periodSeconds: 5
+            initialDelaySeconds: 5
+            periodSeconds: 5
             

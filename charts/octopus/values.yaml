@@ -1,0 +1,17 @@
+replicaCount: 1
+
+image:
+  repository: cbsfuturumacr.azurecr.io/octopus
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 3000
+
+ingress:
+  enabled: true
+  className: nginx
+  host: user-max-octopus.lab.bouwrs.nl
+  path: /

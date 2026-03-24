@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   jupyter-python:
   - apiVersion: v2
-    created: "2026-03-24T21:24:46.533638+01:00"
+    created: "2026-03-24T21:43:23.932681+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -25,9 +25,9 @@ entries:
     version: 2.4.4
   libreoffice:
   - apiVersion: v2
-    created: "2026-03-24T21:24:46.533818+01:00"
+    created: "2026-03-24T21:43:23.932838+01:00"
     description: Test linux desktop app
-    digest: 40e3b117e31db1dac48255a894f9ca5a3f2a8af4d4a6c4e755b659286a931e70
+    digest: 9fb02ed31f5c90107cbc0c055f4a83055e41a238beeecf0668369486e4918839
     home: https://nl.libreoffice.org/
     icon: https://cbs-bouwers.github.io/onyxia-repo/icons/octopus.svg
     keywords:
@@ -36,11 +36,11 @@ entries:
     name: libreoffice
     type: application
     urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/libreoffice-0.0.1.tgz
-    version: 0.0.1
+    - https://cbs-bouwers.github.io/onyxia-repo/libreoffice-0.0.2.tgz
+    version: 0.0.2
   octopus:
   - apiVersion: v2
-    created: "2026-03-24T21:24:46.533957+01:00"
+    created: "2026-03-24T21:43:23.933278+01:00"
     description: request an export audit on statistical output files.
     digest: cc43816737ce2a893b9f9f3c98d87975696457af9c8288337a9545efc6f89f7b
     home: https://cbs.nl/
@@ -55,7 +55,7 @@ entries:
     version: 0.1.14
   rstudio:
   - apiVersion: v2
-    created: "2026-03-24T21:24:46.534896+01:00"
+    created: "2026-03-24T21:43:23.934428+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -77,7 +77,7 @@ entries:
     version: 2.4.2
   rstudio-minimal:
   - apiVersion: v2
-    created: "2026-03-24T21:24:46.536256+01:00"
+    created: "2026-03-24T21:43:23.935528+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -98,4 +98,4 @@ entries:
     urls:
     - https://cbs-bouwers.github.io/onyxia-repo/rstudio-minimal-0.1.1.tgz
     version: 0.1.1
-generated: "2026-03-24T21:24:46.532249+01:00"
+generated: "2026-03-24T21:43:23.930759+01:00"

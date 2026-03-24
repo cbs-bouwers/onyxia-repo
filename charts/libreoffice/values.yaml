@@ -1,14 +1,14 @@
 replicaCount: 1
 
 image:
-  repository: cbsfuturumacr.azurecr.io/octopus
+  repository: lscr.io/linuxserver/libreoffice
   tag: latest
   pullPolicy: IfNotPresent
 
 service:
   type: ClusterIP
-  port: 80
-  targetPort: 3000
+  port: 3001
+  targetPort: 3001
 
 ingress:
   enabled: true

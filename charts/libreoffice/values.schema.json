@@ -15,13 +15,13 @@
         }
       }
     },
-    "octopus": {
-      "title": "Octopus",
+    "libreoffice": {
+      "title": "libreoffice",
       "type": "string",
-      "default" : "Kraken",
+      "default" : "word",
       "enum" : [
-        "Kraken",
-        "Squid"
+        "word",
+        "spreadsheet"
       ]
     }
   }

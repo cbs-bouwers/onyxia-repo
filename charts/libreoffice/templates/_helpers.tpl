@@ -3,7 +3,7 @@
 */}}
 
 {{- define "my-express-app.name" -}}
-octopus-app
+libreoffice
 {{- end }}
 
 {{- define "my-express-app.fullname" -}}

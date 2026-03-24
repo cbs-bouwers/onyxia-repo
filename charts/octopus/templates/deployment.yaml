@@ -29,17 +29,20 @@ spec:
               path: /
               port: {{ .Values.service.targetPort }}
             initialDelaySeconds: 10
+            timeoutSeconds : 2
             periodSeconds: 10
           readinessProbe:
             httpGet:
               path: /
               port: {{ .Values.service.targetPort }}
             initialDelaySeconds: 10
+            timeoutSeconds : 2
             periodSeconds: 10
           startupProbe:
             httpGet:
               path: /
               port: {{ .Values.service.targetPort }}
             initialDelaySeconds: 10
+            timeoutSeconds : 2
             periodSeconds: 10
             

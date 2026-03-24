@@ -4,6 +4,11 @@ kind: Ingress
 metadata:
   name: {{ include "my-express-app.fullname" . }}
   namespace: user-max
+  labels:
+    helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    app.kubernetes.io/name: octopus
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: Helm
 spec:
   ingressClassName: {{ .Values.ingress.className }}
   rules:

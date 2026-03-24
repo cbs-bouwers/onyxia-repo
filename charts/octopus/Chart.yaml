@@ -2,8 +2,8 @@ apiVersion: v2
 name: Octopus
 description: request an export audit on statistical output files.
 type: application
-version: 0.1.2
-appVersion: "0.1.2"
+version: 0.1.3
+appVersion: "0.1.3"
 
 icon: https://cbs-bouwers.github.io/onyxia-repo/icons/octopus.svg
 keywords:

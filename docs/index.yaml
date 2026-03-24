@@ -2,10 +2,10 @@ apiVersion: v1
 entries:
   Octopus:
   - apiVersion: v2
-    appVersion: 0.1.2
-    created: "2026-03-24T13:46:58.612803+01:00"
+    appVersion: 0.1.3
+    created: "2026-03-24T13:54:31.980235+01:00"
     description: request an export audit on statistical output files.
-    digest: 6124d66d766d0bbbb6ba07f0faf6878e0b6282f53798e02928b62434375474ee
+    digest: 1d38f9acdcf6221702fffdb5c0e4c1d610cdc1a8b873589bceb3d800c5212d4a
     home: https://cbs.nl/
     icon: https://cbs-bouwers.github.io/onyxia-repo/icons/octopus.svg
     keywords:
@@ -14,11 +14,11 @@ entries:
     name: Octopus
     type: application
     urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/Octopus-0.1.2.tgz
-    version: 0.1.2
+    - https://cbs-bouwers.github.io/onyxia-repo/Octopus-0.1.3.tgz
+    version: 0.1.3
   jupyter-python:
   - apiVersion: v2
-    created: "2026-03-24T13:46:58.613683+01:00"
+    created: "2026-03-24T13:54:31.981441+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -41,7 +41,7 @@ entries:
     version: 2.4.4
   rstudio:
   - apiVersion: v2
-    created: "2026-03-24T13:46:58.614408+01:00"
+    created: "2026-03-24T13:54:31.982875+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -63,7 +63,7 @@ entries:
     version: 2.4.2
   rstudio-minimal:
   - apiVersion: v2
-    created: "2026-03-24T13:46:58.615168+01:00"
+    created: "2026-03-24T13:54:31.984154+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -84,4 +84,4 @@ entries:
     urls:
     - https://cbs-bouwers.github.io/onyxia-repo/rstudio-minimal-0.1.1.tgz
     version: 0.1.1
-generated: "2026-03-24T13:46:58.612533+01:00"
+generated: "2026-03-24T13:54:31.979813+01:00"

@@ -28,6 +28,12 @@ spec:
           env:
             - name: SELKIES_KEEP_ALIVE
               value: "true"
+            - name: SELKIES_SCALING_DPI
+              value: "144"
+            # - name: DISPLAY
+            #   value: ":1"
+            # - name: DPI
+            #   value: "144"
           ports:
             - containerPort: {{ .Values.service.targetPort }}
             

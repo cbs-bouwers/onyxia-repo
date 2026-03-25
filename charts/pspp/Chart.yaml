@@ -1,0 +1,12 @@
+apiVersion: v2
+name: pspp
+description: Statistical linux desktop app virtualized using Selkies
+type: application
+version: 0.0.1
+
+icon: https://cbs-bouwers.github.io/onyxia-repo/icons/psp.png
+keywords:
+  - CBS
+  - SPSS
+home: https://nl.libreoffice.org/
+

@@ -4,7 +4,7 @@ description: Test linux desktop app
 type: application
 version: 0.0.5
 
-icon: https://cbs-bouwers.github.io/onyxia-repo/icons/octopus.svg
+icon: https://cbs-bouwers.github.io/onyxia-repo/icons/libreoffice.png
 keywords:
   - CBS
   - LibreOffice

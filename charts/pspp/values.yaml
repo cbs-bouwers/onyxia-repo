@@ -1,0 +1,17 @@
+replicaCount: 1
+
+image:
+  repository: lscr.io/linuxserver/libreoffice
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
+  targetPort: 3000
+
+ingress:
+  enabled: true
+  className: nginx
+  host: ""
+  path: /

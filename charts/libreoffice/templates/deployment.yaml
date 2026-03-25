@@ -21,15 +21,34 @@ spec:
         app.kubernetes.io/instance: {{ .Release.Name }}
         app.kubernetes.io/managed-by: Helm
     spec:
+      # initContainers:
+      # - name: set-dpi
+      #   image: alpine
+      #   command:
+      #     - sh
+      #     - -c
+      #     - |
+      #       echo "Xft.dpi: 144" > /config/.Xresources
+      #   volumeMounts:
+      #     - name: config
+      #       mountPath: /config
       containers:
         - name: {{ include "my-express-app.name" . }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command:
+            - /bin/bash
+            - -c
+            - |
+              xrandr --dpi 144 || true
+              exec /init
           env:
             - name: SELKIES_KEEP_ALIVE
               value: "true"
             - name: SELKIES_SCALING_DPI
               value: "144"
+            # - name: XDG_CONFIG_HOME
+            #   value: /config
             # - name: DISPLAY
             #   value: ":1"
             # - name: DPI

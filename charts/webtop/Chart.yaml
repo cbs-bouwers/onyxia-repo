@@ -2,7 +2,7 @@ apiVersion: v2
 name: ubuntu
 description: Test linux OS in browser 
 type: application
-version: 0.0.3
+version: 0.0.4
 
 icon: https://cbs-bouwers.github.io/onyxia-repo/icons/ubuntu.png
 keywords:

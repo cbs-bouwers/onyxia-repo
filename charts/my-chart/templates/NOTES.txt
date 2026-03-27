@@ -1,5 +1,0 @@
-# CBS
-## Octopus
-### String
-
-- Started [Link](http://www.cbs.nl)

@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   jupyter-python:
   - apiVersion: v2
-    created: "2026-03-27T12:18:01.654355+01:00"
+    created: "2026-03-27T12:59:29.557321+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -25,9 +25,9 @@ entries:
     version: 2.4.4
   libreoffice:
   - apiVersion: v2
-    created: "2026-03-27T12:18:01.654683+01:00"
+    created: "2026-03-27T12:59:29.557757+01:00"
     description: Test linux desktop app
-    digest: c98ae65fa7ddf19bdb8582ea3ebc346270e326b3d8e269ae0d7f198b13d10ff3
+    digest: a9d69076bb866759d75529eb7a6739fd98a50abe2481d853de4e31c8e0d3d271
     home: https://nl.libreoffice.org/
     icon: https://cbs-bouwers.github.io/onyxia-repo/icons/libreoffice.png
     keywords:
@@ -36,13 +36,13 @@ entries:
     name: libreoffice
     type: application
     urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/libreoffice-0.0.6.tgz
-    version: 0.0.6
+    - https://cbs-bouwers.github.io/onyxia-repo/libreoffice-0.0.7.tgz
+    version: 0.0.7
   octopus:
   - apiVersion: v2
-    created: "2026-03-27T12:18:01.65517+01:00"
+    created: "2026-03-27T12:59:29.557896+01:00"
     description: request an export audit on statistical output files.
-    digest: cc43816737ce2a893b9f9f3c98d87975696457af9c8288337a9545efc6f89f7b
+    digest: dc3b1fd4df45466acfd814032402b89e2db0128ea2aeb829f5e66a97c8e412a5
     home: https://cbs.nl/
     icon: https://cbs-bouwers.github.io/onyxia-repo/icons/octopus.svg
     keywords:
@@ -51,11 +51,11 @@ entries:
     name: octopus
     type: application
     urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/octopus-0.1.14.tgz
-    version: 0.1.14
+    - https://cbs-bouwers.github.io/onyxia-repo/octopus-0.1.15.tgz
+    version: 0.1.15
   pspp:
   - apiVersion: v2
-    created: "2026-03-27T12:18:01.6553+01:00"
+    created: "2026-03-27T12:59:29.558283+01:00"
     description: Statistical linux desktop app virtualized using Selkies
     digest: 67f058440100314470ba1228cc9487591eaac8d2e98b885210a3edd30b85e2f4
     home: https://nl.libreoffice.org/
@@ -70,7 +70,7 @@ entries:
     version: 0.0.10
   rstudio:
   - apiVersion: v2
-    created: "2026-03-27T12:18:01.656172+01:00"
+    created: "2026-03-27T12:59:29.55905+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -92,7 +92,7 @@ entries:
     version: 2.4.2
   rstudio-minimal:
   - apiVersion: v2
-    created: "2026-03-27T12:18:01.657668+01:00"
+    created: "2026-03-27T12:59:29.560345+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -113,4 +113,4 @@ entries:
     urls:
     - https://cbs-bouwers.github.io/onyxia-repo/rstudio-minimal-0.1.1.tgz
     version: 0.1.1
-generated: "2026-03-27T12:18:01.652397+01:00"
+generated: "2026-03-27T12:59:29.556031+01:00"

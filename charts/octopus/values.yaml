@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: cbsfuturumacr.azurecr.io/octopus
-  tag: latest
+  tag: 0.0.2
   pullPolicy: IfNotPresent
 
 service:

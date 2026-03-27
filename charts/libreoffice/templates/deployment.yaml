@@ -1,8 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "my-express-app.fullname" . }}
-  namespace: user-max
+  name: {{ include "app.fullname" . }}
   labels:
     helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version }}
     app.kubernetes.io/name: libreoffice
@@ -12,11 +11,11 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "my-express-app.name" . }}
+      app: {{ include "app.name" . }}
   template:
     metadata:
       labels:
-        app: {{ include "my-express-app.name" . }}
+        app: {{ include "app.name" . }}
         app.kubernetes.io/name: libreoffice
         app.kubernetes.io/instance: {{ .Release.Name }}
         app.kubernetes.io/managed-by: Helm
@@ -33,7 +32,7 @@ spec:
       #     - name: config
       #       mountPath: /config
       containers:
-        - name: {{ include "my-express-app.name" . }}
+        - name: {{ include "app.name" . }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command:

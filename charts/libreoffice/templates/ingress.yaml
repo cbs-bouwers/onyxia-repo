@@ -2,8 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ include "my-express-app.fullname" . }}
-  namespace: user-max
+  name: {{ include "app.fullname" . }}
   labels:
     helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version }}
     app.kubernetes.io/name: libreoffice
@@ -19,7 +18,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ include "my-express-app.fullname" . }}
+                name: {{ include "app.fullname" . }}
                 port:
                   number: {{ .Values.service.port }}
 {{- end }}

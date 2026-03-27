@@ -18,7 +18,7 @@ Add a deployment descriptor to the templates directory. For Onyxia to function c
 # 
 
 
-> yq -i '.version |= ( split(".") | .[2] = ((.[2] | tonumber) + 1 | tostring) | join(".") )' charts/libreoffice/Chart.yaml
+> yq -i '.version |= ( split(".") | .[2] = ((.[2] | tonumber) + 1 | tostring) | join(".") )' charts/pspp/Chart.yaml
 > rm docs/pspp-*.tgz 
 > helm package charts/pspp -d docs
 > helm repo index docs --url https://cbs-bouwers.github.io/onyxia-repo/

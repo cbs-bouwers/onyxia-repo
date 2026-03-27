@@ -1,5 +1,4 @@
-# CBS
-## Octopus
-### String
+# Octopus
 
-- Started [Link](http://www.cbs.nl)
+A self made application. A hosted front end + per user api backend. Used to test all kinds of functionality and the ability 
+extend Onyxia with custom tooling. 

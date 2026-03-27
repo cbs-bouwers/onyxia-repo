@@ -2,7 +2,7 @@ apiVersion: v2
 name: libreoffice
 description: Test linux desktop app
 type: application
-version: 0.0.7
+version: 0.0.8
 
 icon: https://cbs-bouwers.github.io/onyxia-repo/icons/libreoffice.png
 keywords:

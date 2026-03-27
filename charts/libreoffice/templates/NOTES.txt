@@ -1,5 +1,3 @@
-# CBS
-## Libreoffice
-### String
+# Libreoffice
 
-- Started [Link](http://www.cbs.nl)
+Linux office suite including word processor and spreadsheet. Runs on desktop but uses Selkies to virtualize over WebRTC.

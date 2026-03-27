@@ -1,0 +1,5 @@
+# PSPP
+
+An open source alternative for SPSS. A linux desktop app virtualized through Selkies
+
+- Started [Link](http://www.cbs.nl)

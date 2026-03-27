@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: lscr.io/linuxserver/libreoffice
+  repository: cbsfuturumacr.azurecr.io/pspp
   tag: latest
   pullPolicy: IfNotPresent
 

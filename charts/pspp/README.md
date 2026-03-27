@@ -18,12 +18,9 @@ Add a deployment descriptor to the templates directory. For Onyxia to function c
 # 
 
 
-> change Chart.yaml 
-version: 0.1.6
-appVersion: "0.1.6"
-
-> rm docs/octopus-*.tgz 
-> helm package charts/octopus -d docs
+> yq -i '.version |= ( split(".") | .[2] = ((.[2] | tonumber) + 1 | tostring) | join(".") )' charts/libreoffice/Chart.yaml
+> rm docs/pspp-*.tgz 
+> helm package charts/pspp -d docs
 > helm repo index docs --url https://cbs-bouwers.github.io/onyxia-repo/
 
 git commit and push

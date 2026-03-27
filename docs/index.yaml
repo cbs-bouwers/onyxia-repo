@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   jupyter-python:
   - apiVersion: v2
-    created: "2026-03-27T12:02:38.512719+01:00"
+    created: "2026-03-27T12:11:22.824437+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -25,7 +25,7 @@ entries:
     version: 2.4.4
   libreoffice:
   - apiVersion: v2
-    created: "2026-03-27T12:02:38.513053+01:00"
+    created: "2026-03-27T12:11:22.824838+01:00"
     description: Test linux desktop app
     digest: c98ae65fa7ddf19bdb8582ea3ebc346270e326b3d8e269ae0d7f198b13d10ff3
     home: https://nl.libreoffice.org/
@@ -40,7 +40,7 @@ entries:
     version: 0.0.6
   octopus:
   - apiVersion: v2
-    created: "2026-03-27T12:02:38.513623+01:00"
+    created: "2026-03-27T12:11:22.825428+01:00"
     description: request an export audit on statistical output files.
     digest: cc43816737ce2a893b9f9f3c98d87975696457af9c8288337a9545efc6f89f7b
     home: https://cbs.nl/
@@ -55,9 +55,9 @@ entries:
     version: 0.1.14
   pspp:
   - apiVersion: v2
-    created: "2026-03-27T12:02:38.513752+01:00"
+    created: "2026-03-27T12:11:22.825632+01:00"
     description: Statistical linux desktop app virtualized using Selkies
-    digest: df6e673fecef3e7f165eeb912f43089125f4f8ddd54125a8d5d80653d8200ad5
+    digest: 27a32a626b0c052ee755c490b0658bc112c5a4b1cd417fba65c1cc522f88486b
     home: https://nl.libreoffice.org/
     icon: https://cbs-bouwers.github.io/onyxia-repo/icons/pspp.png
     keywords:
@@ -66,11 +66,11 @@ entries:
     name: pspp
     type: application
     urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/pspp-0.0.8.tgz
-    version: 0.0.8
+    - https://cbs-bouwers.github.io/onyxia-repo/pspp-0.0.9.tgz
+    version: 0.0.9
   rstudio:
   - apiVersion: v2
-    created: "2026-03-27T12:02:38.514637+01:00"
+    created: "2026-03-27T12:11:22.826873+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -92,7 +92,7 @@ entries:
     version: 2.4.2
   rstudio-minimal:
   - apiVersion: v2
-    created: "2026-03-27T12:02:38.515736+01:00"
+    created: "2026-03-27T12:11:22.828349+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -113,4 +113,4 @@ entries:
     urls:
     - https://cbs-bouwers.github.io/onyxia-repo/rstudio-minimal-0.1.1.tgz
     version: 0.1.1
-generated: "2026-03-27T12:02:38.510826+01:00"
+generated: "2026-03-27T12:11:22.822124+01:00"

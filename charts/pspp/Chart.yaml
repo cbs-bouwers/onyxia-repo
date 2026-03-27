@@ -2,7 +2,7 @@ apiVersion: v2
 name: pspp
 description: Statistical linux desktop app virtualized using Selkies
 type: application
-version: 0.0.8
+version: 0.0.9
 icon: https://cbs-bouwers.github.io/onyxia-repo/icons/pspp.png
 keywords:
   - CBS

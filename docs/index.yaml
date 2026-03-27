@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   jupyter-python:
   - apiVersion: v2
-    created: "2026-03-25T07:15:07.343383+01:00"
+    created: "2026-03-27T09:34:48.548393+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -25,22 +25,22 @@ entries:
     version: 2.4.4
   libreoffice:
   - apiVersion: v2
-    created: "2026-03-25T07:15:07.34403+01:00"
+    created: "2026-03-27T09:34:48.548538+01:00"
     description: Test linux desktop app
-    digest: c5de0b9303c19cb93db48458f37ef8e891a7ef0e1a63847e4fcd32b79a6b2199
+    digest: c98ae65fa7ddf19bdb8582ea3ebc346270e326b3d8e269ae0d7f198b13d10ff3
     home: https://nl.libreoffice.org/
-    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/octopus.svg
+    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/libreoffice.png
     keywords:
     - CBS
     - LibreOffice
     name: libreoffice
     type: application
     urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/libreoffice-0.0.5.tgz
-    version: 0.0.5
+    - https://cbs-bouwers.github.io/onyxia-repo/libreoffice-0.0.6.tgz
+    version: 0.0.6
   octopus:
   - apiVersion: v2
-    created: "2026-03-25T07:15:07.344429+01:00"
+    created: "2026-03-27T09:34:48.549026+01:00"
     description: request an export audit on statistical output files.
     digest: cc43816737ce2a893b9f9f3c98d87975696457af9c8288337a9545efc6f89f7b
     home: https://cbs.nl/
@@ -55,7 +55,7 @@ entries:
     version: 0.1.14
   rstudio:
   - apiVersion: v2
-    created: "2026-03-25T07:15:07.345932+01:00"
+    created: "2026-03-27T09:34:48.549972+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -77,7 +77,7 @@ entries:
     version: 2.4.2
   rstudio-minimal:
   - apiVersion: v2
-    created: "2026-03-25T07:15:07.347512+01:00"
+    created: "2026-03-27T09:34:48.551429+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -98,4 +98,4 @@ entries:
     urls:
     - https://cbs-bouwers.github.io/onyxia-repo/rstudio-minimal-0.1.1.tgz
     version: 0.1.1
-generated: "2026-03-25T07:15:07.341264+01:00"
+generated: "2026-03-27T09:34:48.546491+01:00"

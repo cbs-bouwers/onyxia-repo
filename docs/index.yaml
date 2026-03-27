@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   jupyter-python:
   - apiVersion: v2
-    created: "2026-03-27T14:10:03.623041+01:00"
+    created: "2026-03-27T14:17:28.555062+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -25,7 +25,7 @@ entries:
     version: 2.4.4
   libreoffice:
   - apiVersion: v2
-    created: "2026-03-27T14:10:03.623248+01:00"
+    created: "2026-03-27T14:17:28.556111+01:00"
     description: Test linux desktop app
     digest: f7f29728335b5f0f1b2f5849ac3131e7ace20fac5141451c9476b57b2221a00f
     home: https://nl.libreoffice.org/
@@ -40,7 +40,7 @@ entries:
     version: 0.0.8
   octopus:
   - apiVersion: v2
-    created: "2026-03-27T14:10:03.623493+01:00"
+    created: "2026-03-27T14:17:28.556363+01:00"
     description: request an export audit on statistical output files.
     digest: f425281dc538e7f16c9b22f2ff8c992ac1ab746d5b67a93fc16b9c2b1517a874
     home: https://cbs.nl/
@@ -55,7 +55,7 @@ entries:
     version: 0.1.16
   pspp:
   - apiVersion: v2
-    created: "2026-03-27T14:10:03.623709+01:00"
+    created: "2026-03-27T14:17:28.556697+01:00"
     description: Statistical linux desktop app virtualized using Selkies
     digest: 67f058440100314470ba1228cc9487591eaac8d2e98b885210a3edd30b85e2f4
     home: https://nl.libreoffice.org/
@@ -70,7 +70,7 @@ entries:
     version: 0.0.10
   rstudio:
   - apiVersion: v2
-    created: "2026-03-27T14:10:03.624466+01:00"
+    created: "2026-03-27T14:17:28.558849+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -92,7 +92,7 @@ entries:
     version: 2.4.2
   rstudio-minimal:
   - apiVersion: v2
-    created: "2026-03-27T14:10:03.62632+01:00"
+    created: "2026-03-27T14:17:28.559891+01:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -115,7 +115,21 @@ entries:
     version: 0.1.1
   ubuntu:
   - apiVersion: v2
-    created: "2026-03-27T14:10:03.62689+01:00"
+    created: "2026-03-27T14:17:28.560231+01:00"
+    description: Test linux OS in browser
+    digest: 70942e200be45e24a04f1188969e012ba626f3cbe928182a1c0a22b66e82243b
+    home: https://docs.linuxserver.io/images/docker-webtop/#version-tags
+    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/ubuntu.png
+    keywords:
+    - CBS
+    - Ubuntu
+    name: ubuntu
+    type: application
+    urls:
+    - https://cbs-bouwers.github.io/onyxia-repo/ubuntu-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    created: "2026-03-27T14:17:28.560107+01:00"
     description: Test linux OS in browser
     digest: bc6baac66379db851bdeca119370ad729b17a919ee2c564584c6023444a98c9d
     home: https://docs.linuxserver.io/images/docker-webtop/#version-tags
@@ -129,7 +143,7 @@ entries:
     - https://cbs-bouwers.github.io/onyxia-repo/ubuntu-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
-    created: "2026-03-27T14:10:03.621876+01:00"
+    created: "2026-03-27T14:17:28.553199+01:00"
     description: Test linux OS in browser
     digest: a957b12308721470b28e9bc7e5c216b2cf0e8c82cd95d543bf74ac3514b8bd25
     home: https://docs.linuxserver.io/images/docker-webtop/#version-tags
@@ -142,4 +156,4 @@ entries:
     urls:
     - https://cbs-bouwers.github.io/onyxia-repo/Ubuntu-0.0.1.tgz
     version: 0.0.1
-generated: "2026-03-27T14:10:03.621334+01:00"
+generated: "2026-03-27T14:17:28.552566+01:00"

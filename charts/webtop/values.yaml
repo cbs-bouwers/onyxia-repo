@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: lscr.io/linuxserver/webtop
-  tag: ubuntu-i3
+  tag: latest  # XFCE Alpine
   pullPolicy: IfNotPresent
 
 service:

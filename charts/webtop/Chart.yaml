@@ -1,0 +1,12 @@
+apiVersion: v2
+name: Ubuntu
+description: Test linux OS in browser 
+type: application
+version: 0.0.1
+
+icon: https://cbs-bouwers.github.io/onyxia-repo/icons/ubuntu.png
+keywords:
+  - CBS
+  - Ubuntu
+home: https://docs.linuxserver.io/images/docker-webtop/#version-tags
+

@@ -1,0 +1,3 @@
+# Libreoffice
+
+Linux office suite including word processor and spreadsheet. Runs on desktop but uses Selkies to virtualize over WebRTC.

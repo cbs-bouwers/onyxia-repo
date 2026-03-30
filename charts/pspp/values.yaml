@@ -23,3 +23,17 @@ s3:
   defaultRegion: ""
   secretAccessKey: ""
   sessionToken: ""
+
+init:
+  personalInit: |
+    #!/bin/bash
+    
+    # 1. Disable the XFCE Desktop 'Tip of the Day' popup
+    mkdir -p ~/.config/autostart
+    echo -e "[Desktop Entry]\nHidden=true" > ~/.config/autostart/xfce4-tips-autostart.desktop
+    
+    # 2. Disable the PSPP Application Splash/Welcome Screen
+    # We copy the shortcut to the user directory to avoid root permission errors
+    mkdir -p ~/.local/share/applications
+    cp /usr/share/applications/org.fsf.pspp.desktop ~/.local/share/applications/ 2>/dev/null || true
+    sed -i 's/Exec=psppire/Exec=psppire --no-splash/g' ~/.local/share/applications/*.desktop

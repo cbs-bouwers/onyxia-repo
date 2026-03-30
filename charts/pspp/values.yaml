@@ -15,3 +15,11 @@ ingress:
   className: nginx
   host: ""
   path: /
+
+s3:
+  enabled: false
+  accessKeyId: ""
+  endpoint: ""
+  defaultRegion: ""
+  secretAccessKey: ""
+  sessionToken: ""

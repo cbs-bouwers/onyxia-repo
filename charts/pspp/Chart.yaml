@@ -8,3 +8,7 @@ keywords:
   - CBS
   - SPSS
 home: https://nl.libreoffice.org/
+dependencies:
+  - name: library-chart
+    version: 2.0.3
+    repository: https://inseefrlab.github.io/helm-charts-interactive-services

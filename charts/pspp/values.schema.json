@@ -15,5 +15,17 @@
         }
       }
     }
+    "s3": {
+      "description": "Configuration for S3 Object Storage",
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "title": "Enable S3 Mount",
+          "description": "Mount S3 as a local filesystem inside the PSPP workspace",
+          "default": true
+        }
+      }
+    }
   }
 }

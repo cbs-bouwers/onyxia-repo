@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   jupyter-python:
   - apiVersion: v2
-    created: "2026-03-27T14:21:54.921452+01:00"
+    created: "2026-03-31T20:51:04.489537+02:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -23,24 +23,9 @@ entries:
     urls:
     - https://cbs-bouwers.github.io/onyxia-repo/jupyter-python-2.4.4.tgz
     version: 2.4.4
-  libreoffice:
-  - apiVersion: v2
-    created: "2026-03-27T14:21:54.921714+01:00"
-    description: Test linux desktop app
-    digest: f7f29728335b5f0f1b2f5849ac3131e7ace20fac5141451c9476b57b2221a00f
-    home: https://nl.libreoffice.org/
-    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/libreoffice.png
-    keywords:
-    - CBS
-    - LibreOffice
-    name: libreoffice
-    type: application
-    urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/libreoffice-0.0.8.tgz
-    version: 0.0.8
   octopus:
   - apiVersion: v2
-    created: "2026-03-27T14:21:54.922022+01:00"
+    created: "2026-03-31T20:51:04.490009+02:00"
     description: request an export audit on statistical output files.
     digest: f425281dc538e7f16c9b22f2ff8c992ac1ab746d5b67a93fc16b9c2b1517a874
     home: https://cbs.nl/
@@ -53,24 +38,9 @@ entries:
     urls:
     - https://cbs-bouwers.github.io/onyxia-repo/octopus-0.1.16.tgz
     version: 0.1.16
-  pspp:
-  - apiVersion: v2
-    created: "2026-03-27T14:21:54.922489+01:00"
-    description: Statistical linux desktop app virtualized using Selkies
-    digest: 67f058440100314470ba1228cc9487591eaac8d2e98b885210a3edd30b85e2f4
-    home: https://nl.libreoffice.org/
-    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/pspp.png
-    keywords:
-    - CBS
-    - SPSS
-    name: pspp
-    type: application
-    urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/pspp-0.0.10.tgz
-    version: 0.0.10
   rstudio:
   - apiVersion: v2
-    created: "2026-03-27T14:21:54.923573+01:00"
+    created: "2026-03-31T20:51:04.493628+02:00"
     dependencies:
     - name: library-chart
       repository: https://inseefrlab.github.io/helm-charts-interactive-services
@@ -90,84 +60,4 @@ entries:
     urls:
     - https://cbs-bouwers.github.io/onyxia-repo/rstudio-2.4.2.tgz
     version: 2.4.2
-  rstudio-minimal:
-  - apiVersion: v2
-    created: "2026-03-27T14:21:54.925161+01:00"
-    dependencies:
-    - name: library-chart
-      repository: https://inseefrlab.github.io/helm-charts-interactive-services
-      version: 2.0.3
-    description: The RStudio IDE with a collection of standard data science packages.
-    digest: a311511008eefb8cd4c4eb4fde940b0eb09de27a8b1087dc66ee097970485f14
-    home: https://www.rstudio.com/
-    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/rstudio.png
-    keywords:
-    - RStudio
-    - R
-    name: rstudio-minimal
-    sources:
-    - https://github.com/InseeFrLab/images-datascience
-    - https://github.com/InseeFrLab/helm-charts-interactive-services
-    - https://github.com/cbs-bouwers/onyxia-repo
-    type: application
-    urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/rstudio-minimal-0.1.1.tgz
-    version: 0.1.1
-  ubuntu:
-  - apiVersion: v2
-    created: "2026-03-27T14:21:54.925963+01:00"
-    description: Test linux OS in browser
-    digest: 808ddb3eddbde380151c38ef49de4a06689e2c1514c52e5a8134a1567b51751f
-    home: https://docs.linuxserver.io/images/docker-webtop/#version-tags
-    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/ubuntu.png
-    keywords:
-    - CBS
-    - Ubuntu
-    name: ubuntu
-    type: application
-    urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/ubuntu-0.0.4.tgz
-    version: 0.0.4
-  - apiVersion: v2
-    created: "2026-03-27T14:21:54.925846+01:00"
-    description: Test linux OS in browser
-    digest: 70942e200be45e24a04f1188969e012ba626f3cbe928182a1c0a22b66e82243b
-    home: https://docs.linuxserver.io/images/docker-webtop/#version-tags
-    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/ubuntu.png
-    keywords:
-    - CBS
-    - Ubuntu
-    name: ubuntu
-    type: application
-    urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/ubuntu-0.0.3.tgz
-    version: 0.0.3
-  - apiVersion: v2
-    created: "2026-03-27T14:21:54.925544+01:00"
-    description: Test linux OS in browser
-    digest: bc6baac66379db851bdeca119370ad729b17a919ee2c564584c6023444a98c9d
-    home: https://docs.linuxserver.io/images/docker-webtop/#version-tags
-    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/ubuntu.png
-    keywords:
-    - CBS
-    - Ubuntu
-    name: ubuntu
-    type: application
-    urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/ubuntu-0.0.2.tgz
-    version: 0.0.2
-  - apiVersion: v2
-    created: "2026-03-27T14:21:54.919703+01:00"
-    description: Test linux OS in browser
-    digest: a957b12308721470b28e9bc7e5c216b2cf0e8c82cd95d543bf74ac3514b8bd25
-    home: https://docs.linuxserver.io/images/docker-webtop/#version-tags
-    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/ubuntu.png
-    keywords:
-    - CBS
-    - Ubuntu
-    name: ubuntu
-    type: application
-    urls:
-    - https://cbs-bouwers.github.io/onyxia-repo/Ubuntu-0.0.1.tgz
-    version: 0.0.1
-generated: "2026-03-27T14:21:54.919185+01:00"
+generated: "2026-03-31T20:51:04.485229+02:00"

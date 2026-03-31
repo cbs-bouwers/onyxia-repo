@@ -1,0 +1,90 @@
+apiVersion: v1
+entries:
+  libreoffice:
+  - apiVersion: v2
+    created: "2026-03-31T20:48:54.67973+02:00"
+    description: Test linux desktop app
+    digest: f7f29728335b5f0f1b2f5849ac3131e7ace20fac5141451c9476b57b2221a00f
+    home: https://nl.libreoffice.org/
+    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/libreoffice.png
+    keywords:
+    - CBS
+    - LibreOffice
+    name: libreoffice
+    type: application
+    urls:
+    - https://cbs-bouwers.github.io/onyxia-repo/libreoffice-0.0.8.tgz
+    version: 0.0.8
+  pspp:
+  - apiVersion: v2
+    created: "2026-03-31T20:48:54.680462+02:00"
+    description: Statistical linux desktop app virtualized using Selkies
+    digest: 67f058440100314470ba1228cc9487591eaac8d2e98b885210a3edd30b85e2f4
+    home: https://nl.libreoffice.org/
+    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/pspp.png
+    keywords:
+    - CBS
+    - SPSS
+    name: pspp
+    type: application
+    urls:
+    - https://cbs-bouwers.github.io/onyxia-repo/pspp-0.0.10.tgz
+    version: 0.0.10
+  ubuntu:
+  - apiVersion: v2
+    created: "2026-03-31T20:48:54.682661+02:00"
+    description: Test linux OS in browser
+    digest: 808ddb3eddbde380151c38ef49de4a06689e2c1514c52e5a8134a1567b51751f
+    home: https://docs.linuxserver.io/images/docker-webtop/#version-tags
+    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/ubuntu.png
+    keywords:
+    - CBS
+    - Ubuntu
+    name: ubuntu
+    type: application
+    urls:
+    - https://cbs-bouwers.github.io/onyxia-repo/ubuntu-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
+    created: "2026-03-31T20:48:54.682114+02:00"
+    description: Test linux OS in browser
+    digest: 70942e200be45e24a04f1188969e012ba626f3cbe928182a1c0a22b66e82243b
+    home: https://docs.linuxserver.io/images/docker-webtop/#version-tags
+    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/ubuntu.png
+    keywords:
+    - CBS
+    - Ubuntu
+    name: ubuntu
+    type: application
+    urls:
+    - https://cbs-bouwers.github.io/onyxia-repo/ubuntu-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    created: "2026-03-31T20:48:54.681501+02:00"
+    description: Test linux OS in browser
+    digest: bc6baac66379db851bdeca119370ad729b17a919ee2c564584c6023444a98c9d
+    home: https://docs.linuxserver.io/images/docker-webtop/#version-tags
+    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/ubuntu.png
+    keywords:
+    - CBS
+    - Ubuntu
+    name: ubuntu
+    type: application
+    urls:
+    - https://cbs-bouwers.github.io/onyxia-repo/ubuntu-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    created: "2026-03-31T20:48:54.680985+02:00"
+    description: Test linux OS in browser
+    digest: a957b12308721470b28e9bc7e5c216b2cf0e8c82cd95d543bf74ac3514b8bd25
+    home: https://docs.linuxserver.io/images/docker-webtop/#version-tags
+    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/ubuntu.png
+    keywords:
+    - CBS
+    - Ubuntu
+    name: ubuntu
+    type: application
+    urls:
+    - https://cbs-bouwers.github.io/onyxia-repo/ubuntu-0.0.1.tgz
+    version: 0.0.1
+generated: "2026-03-31T20:48:54.678796+02:00"

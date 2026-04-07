@@ -127,7 +127,7 @@ helm package "${chart_path}" -d "${catalog_path}"
 
 # Step 5: Update repository index
 echo "📚 Updating repository index..."
-helm repo index "${catalog_path}" --url https://cbs-bouwers.github.io/onyxia-repo/
+helm repo index "${catalog_path}" --url "https://cbs-bouwers.github.io/onyxia-repo/${catalog}"
 
 echo "✅ Chart '${chart}' has been successfully built!"
 

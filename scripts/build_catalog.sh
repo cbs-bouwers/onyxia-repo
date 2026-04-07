@@ -60,7 +60,7 @@ fi
 echo "👷‍♀️ Update catalog '${catalog}'"
 
 echo "📚 Updating repository index..."
-helm repo index "${catalog_path}" --url https://cbs-bouwers.github.io/onyxia-repo/
+helm repo index "${catalog_path}" --url "https://cbs-bouwers.github.io/onyxia-repo/${catalog}"
 
 echo "✅ Catalog '${catalog}' has been successfully updated!"
 

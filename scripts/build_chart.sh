@@ -17,7 +17,30 @@
 # Quit script if a step fails (exit-on-error mode)
 set -e
 
-# Parse arguments
+usage() {
+  name=$(basename "$0")
+  
+  echo "Build Chart"
+  echo ""
+  echo "Usage:"
+  echo "  $name [--no-lint] [--update] [--catalog=CATALOG] CHART"
+  echo "  $name -h | --help"
+  echo ""
+  echo "Arguments:"
+  echo "  CHART                Name of chart to build"
+  echo ""
+  echo "Options:"
+  echo "  -h --help            Show this screen."
+  echo "  --no-lint            Do not run 'chart lint' on chart files."
+  echo "  --update             Update catalog index."
+  echo "  --catalog=CATALOG    Name of catalog to save chart in [default: 'default']."
+  echo ""
+  exit 1
+}
+
+# Initialise arguments
+chart=""
+catalog="default"
 no_lint=0
 do_update=0
 
@@ -27,9 +50,16 @@ while [[ $# -gt 0 ]]; do
       no_lint=1
       shift
       ;;
-    --update-deps)
+    --update)
       do_update=1
       shift
+      ;;
+    --catalog=*)
+      catalog="${1#*=}"
+      shift
+      ;;
+    -h|--help)
+      usage
       ;;
     -*)
       echo "Unknown option: $1"
@@ -49,24 +79,32 @@ done
 
 # Check if chart name is provided
 if [[ -z "$chart" ]]; then
-  echo "ℹ️ Usage: $0 <chart-name> [--no-lint] [--no-update]"
+  echo "❌ Error: Missing required chart name"
   exit 1
 fi
 
-chart_path="charts/$chart"
+chart_path="charts/${chart}"
 
 # Check if chart exists
-if [[ ! -d "$chart_path" ]]; then
-  echo "❌ Error: Chart '$chart' not found in $chart_path"
+if [[ ! -d "${chart_path}" ]]; then
+  echo "❌ Error: Chart '${chart}' not found in ${chart_path}"
   exit 1
 fi
 
-echo "👷‍♀️ Building chart: $chart"
+catalog_path="docs/${catalog}"
+
+# Check if catalog exists
+if [[ ! -d "${catalog_path}" ]]; then
+  echo "❌ Error: Catalog '${catalog}' not found in ${catalog_path}"
+  exit 1
+fi
+
+echo "👷‍♀️ Build chart '${chart}' for catalog '${catalog}'"
 
 # Step 1: Linting (unless skipped)
 if [[ $no_lint -eq 0 ]]; then
   echo "👮 Linting chart..."
-  helm lint "$chart_path"
+  helm lint "${chart_path}"
 else
   echo "⚠️ Skipping linting (you've set --no-lint to skip)"
 fi
@@ -74,22 +112,22 @@ fi
 # Step 2: Dependency update (unless skipped)
 if [[ $do_update -eq 1 ]]; then
   echo "🔁 Updating dependencies..."
-  helm dependency update "$chart_path"
+  helm dependency update "${chart_path}"
 else
-  echo "⚠️ Skipping dependency update (use --update-deps to update chart dependencies)"
+  echo "⚠️ Skipping dependency update (use --update to update chart dependencies)"
 fi
 
 # Step 3: Clean existing packages
 echo "🗑️ Cleaning existing packages..."
-find docs/ -maxdepth 1 -type f -name "*$chart*.tgz" -exec rm -f {} \+
+find "${catalog_path}" -maxdepth 1 -type f -name "*${chart}*.tgz" -exec rm -f {} \+
 
 # Step 4: Package chart
 echo "📦 Packaging chart..."
-helm package "$chart_path" -d ./docs
+helm package "${chart_path}" -d "${catalog_path}"
 
 # Step 5: Update repository index
 echo "📚 Updating repository index..."
-helm repo index ./docs --url https://cbs-bouwers.github.io/onyxia-repo/
+helm repo index "${catalog_path}" --url "https://cbs-bouwers.github.io/onyxia-repo/${catalog}"
 
-echo "✅ Chart build completed successfully!"
+echo "✅ Chart '${chart}' has been successfully built!"
 

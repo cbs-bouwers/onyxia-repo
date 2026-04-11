@@ -1,0 +1,63 @@
+apiVersion: v1
+entries:
+  jupyter-python:
+  - apiVersion: v2
+    created: "2026-04-07T10:56:28.383514+02:00"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-interactive-services
+      version: 2.0.3
+    description: The JupyterLab IDE with Python and a collection of standard data
+      science packages.
+    digest: 2b796e6c831468fb612aaa5d5e97566bd8158df84204c6563f7082b1fb307a46
+    home: https://jupyter.org/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/jupyter.png
+    keywords:
+    - Jupyter
+    - Python
+    name: jupyter-python
+    sources:
+    - https://github.com/InseeFrLab/images-datascience
+    - https://github.com/InseeFrLab/helm-charts-interactive-services
+    type: application
+    urls:
+    - https://cbs-bouwers.github.io/onyxia-repo/default/jupyter-python-2.4.4.tgz
+    version: 2.4.4
+  octopus:
+  - apiVersion: v2
+    created: "2026-04-07T10:56:28.383989+02:00"
+    description: request an export audit on statistical output files.
+    digest: f425281dc538e7f16c9b22f2ff8c992ac1ab746d5b67a93fc16b9c2b1517a874
+    home: https://cbs.nl/
+    icon: https://cbs-bouwers.github.io/onyxia-repo/icons/octopus.svg
+    keywords:
+    - CBS
+    - Octopus
+    name: octopus
+    type: application
+    urls:
+    - https://cbs-bouwers.github.io/onyxia-repo/default/octopus-0.1.16.tgz
+    version: 0.1.16
+  rstudio:
+  - apiVersion: v2
+    created: "2026-04-07T10:56:28.386277+02:00"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-interactive-services
+      version: 2.0.3
+    description: The RStudio IDE with a collection of standard data science packages.
+    digest: 89fec29bc58f048bed6d2bb9bd8c3e2ca0698a048cb91d84448a50c4dbbc24af
+    home: https://www.rstudio.com/
+    icon: https://minio.lab.sspcloud.fr/projet-onyxia/assets/servicesImg/rstudio.png
+    keywords:
+    - RStudio
+    - R
+    name: rstudio
+    sources:
+    - https://github.com/InseeFrLab/images-datascience
+    - https://github.com/InseeFrLab/helm-charts-interactive-services
+    type: application
+    urls:
+    - https://cbs-bouwers.github.io/onyxia-repo/default/rstudio-2.4.2.tgz
+    version: 2.4.2
+generated: "2026-04-07T10:56:28.380194+02:00"

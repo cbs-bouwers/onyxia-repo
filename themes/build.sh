@@ -1,5 +1,5 @@
 cd keycloak 
 
-zip -r ../../docs/themes/octopus.zip octopus
+zip -r ../../docs/themes/octopus.jar octopus
 
-unzip -l ../../docs/themes/octopus.zip
+unzip -l ../../docs/themes/octopus.jar

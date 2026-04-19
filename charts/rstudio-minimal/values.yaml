@@ -169,7 +169,7 @@ resources:
   # M : 2 - 4 CPU | 4  GB RAM
   # L : 2 - 4 CPU | 8  GB RAM
   # XL: 4 - 8 CPU | 16 GB RAM
-  size: "M"
+  size: "XS"
   # Or configure limits manually
   custom:
     enabled: false
